@@ -1,0 +1,43 @@
+# Description
+This server shows how to set up a python django server to perform CRUD operations with a mongo database.
+
+https://bezkoder.com/django-mongodb-crud-rest-framework/
+
+# Migrate Data Model to MongoDB Database
+python manage.py makemigrations tutorials
+
+# Apply the Generated Migration
+python manage.py migrate tutorials
+
+# Install Django REST Framework
+pip install djangorestframework
+
+# Create a New Django Project
+django-admin startproject <projectName>
+
+Now open settings.py and add Django REST framework to the INSTALLED_APPS array here.
+
+INSTALLED_APPS = [
+    ...
+    # Django REST framework
+    'rest_framework',
+]
+
+# Connect Django Project to MongoDB Database
+pip install djongo
+
+Then we need to setup MongoDb Database engine.
+So open settings.py and change declaration of DATABASES:
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'djongo',
+        'NAME': '<databaseName>',
+        'HOST': '127.0.0.1',
+        'PORT': 27017,
+    }
+}
+
+# Set Up New Django App for REST CRUD API
+cd <projectName>
+python manage.py startapp tutorials
