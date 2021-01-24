@@ -1,5 +1,11 @@
 # Description
-This server shows how to set up a python django server to perform CRUD operations with a mongo database.
+This python server shows how to work with the Django REST Framework and MongoDB to perform CRUD operations. 
+
+Specifically:
+- How to setup Django to connect with MongoDB Database
+- How to define Data Models and migrate it to MongoDB
+- How to use Django REST Framework to process HTTP requests
+- How to make Django CRUD Operations with MongoDB Database
 
 https://bezkoder.com/django-mongodb-crud-rest-framework/
 
